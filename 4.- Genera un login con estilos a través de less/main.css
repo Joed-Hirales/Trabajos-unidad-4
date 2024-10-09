@@ -1,0 +1,26 @@
+ul li:nth-child(1) {
+  background-color: #ff00a2;
+  width: 80%;
+}
+ul li:nth-child(2) {
+  background-color: #fff200;
+  width: 80%;
+}
+ul li:nth-child(3) {
+  background-color: #04ffff;
+  width: 80%;
+}
+ul li:nth-child(4) {
+  background-color: #e36afb;
+  width: 80%;
+}
+ul li:nth-child(5) {
+  background-color: #b1ffab;
+  width: 80%;
+}
+.container {
+  background: #85def3;
+  border-radius: 5px;
+  width: 35%;
+  height: 100%;
+}
