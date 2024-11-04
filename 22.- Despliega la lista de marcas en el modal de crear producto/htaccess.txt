@@ -1,0 +1,6 @@
+Options +FollowSymLinks -MultiViews -Indexes
+RewriteEngine on
+
+
+#páginas
+RewriteRule ^home?$ home.php
