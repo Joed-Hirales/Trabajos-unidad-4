@@ -1,0 +1,66 @@
+@main-color: #F98D76;
+@font-color: #186DE5;
+
+@list: "blue", "green", "cyan", "orange", "red";
+
+#colors() {
+  1: blue;
+  2: green;
+  3: cyan;
+  4: orange;
+  5: red;
+}
+
+.setLi(@c) when (@c > 0){
+
+	li:nth-child(@{c}){  
+
+		.estiloPersonalizado(red,black,true,@c)
+	} 
+
+	.setLi((@c - 1))
+}
+
+.estiloPersonalizado(@bg;@color;@border,@c)
+{
+
+	background: @bg;
+	color: @color;
+	& when (@border = true) {
+        border-style: dotted;
+    }
+}
+
+.container{
+
+	background: @main-color;
+	border-radius: 5px;
+	width: 60%;
+	margin: auto;
+	color:@font-color; 
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+	.setLi(5);
+
+	
+
+	/*
+	li:nth-child(1){
+		.estiloPersonalizado(blue,black,true)
+	}
+
+	li:nth-child(2){
+		.estiloPersonalizado(red,yellow,true)
+	}
+
+	li:nth-child(3){
+		.estiloPersonalizado(green,gray,false)
+	}
+	*/
+
+} 
+
+form{
+
+	padding: 15px;
+}
